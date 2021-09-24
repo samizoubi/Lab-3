@@ -2,20 +2,28 @@ import java.util.ArrayList;
 
 public class AddressBook {
 
-    private ArrayList<BuddyInfo> buddyCollection;
+    private ArrayList<BuddyInfo> myBuddies;
 
     public AddressBook(){
-        this.buddyCollection = new ArrayList<>();
+        this.myBuddies = new ArrayList<>();
     }
 
     public void addBuddy(BuddyInfo buddy){
-
-        this.buddyCollection.add(buddy);
+        if(buddy != null) {
+            this.myBuddies.add(buddy);
+        }
 
     }
 
-    public void removeBuddy(BuddyInfo buddyInfo){
-        this.buddyCollection.remove(buddyInfo);
+    public void removeBuddy(int index){
+        if (index>= 0 && index < this.myBuddies.size()) {
+            this.myBuddies.remove(index);
+        }
+
+    }
+
+    public void printHello(){
+        System.out.println("Hello");
     }
 
     public static void main(String[] args) {
@@ -23,8 +31,9 @@ public class AddressBook {
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", 613);
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
-        System.out.println("Address Book");
+        addressBook.removeBuddy(0);
+
+        //I have successfully uploaded my project onto GitHub to collaborate with other developers.
     }
 
 
