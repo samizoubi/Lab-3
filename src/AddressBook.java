@@ -13,11 +13,13 @@ public class AddressBook {
         if(buddy != null) {
             this.myBuddies.add(buddy);
         }
+    }
 
     public void removeBuddy(int index){
         if (index>= 0 && index < this.myBuddies.size()) {
             this.myBuddies.remove(index);
         }
+    }
 
     public static void main(String[] args) {
 
