@@ -25,6 +25,9 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(0);
+        
+        //I have successfully uploaded my project onto GitHub to collaborate with other developers.
+        
     }
 
 
